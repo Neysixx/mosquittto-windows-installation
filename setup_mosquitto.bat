@@ -40,18 +40,6 @@ IF %ERRORLEVEL% NEQ 0 (
 echo Starting Mosquitto service...
 net start mosquitto
 
-:: === MQTT EXPLORER INSTALLATION ===
-echo Downloading MQTT Explorer v0.3.5...
-powershell -Command "Invoke-WebRequest -Uri https://github.com/thomasnordquist/MQTT-Explorer/releases/download/v0.3.5/MQTT-Explorer-Setup-0.3.5.exe -OutFile mqtt-explorer-installer.exe"
-
-echo Silent installation of MQTT Explorer...
-start /wait mqtt-explorer-installer.exe /SILENT
-
-echo MQTT Explorer successfully installed.
-
-echo Launching MQTT Explorer...
-start "" "C:\Program Files\MQTT Explorer\MQTT-Explorer.exe"
-
 echo.
 echo ✅ Installation completed successfully.
 pause
